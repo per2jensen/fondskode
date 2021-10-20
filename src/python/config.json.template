@@ -1,0 +1,9 @@
+{
+  "FONDSKODE"       : "952737",
+  "TOTALKREDIT_URL" : "https://netbank.totalkredit.dk/netbank/showStockExchangeInternal.do",
+  "DOCKER_NET"      : "hassio",
+  "INFLUX_HOST"     : "a0d7b954-influxdb",
+  "INFLUX_USER"     : "THE_USER",
+  "INFLUX_PASS"     : "THE_PASSWORD",
+  "INFLUX_DB"       : "THE_DB"
+}

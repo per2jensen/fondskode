@@ -1,8 +1,4 @@
 #! /bin/bash
 
-#
-#  Build a container using podman and execute it
-#
-
-podman build --tag ubuntu:fondskode -f ../test/Dockerfile
-podman run -it ubuntu:fondskode
+docker build --tag pj/fondskode -f ../test/Dockerfile
+docker run --net hassio --rm  --name fondskode-getter -it pj/fondskode:latest
