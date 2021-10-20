@@ -1,0 +1,1100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="da" lang="da"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <!-- p0_WLS11-tknetbank_appsrv630-4 -->
+        <!-- Tv0XMXp6fZtC8BG1(JjuYb -->
+        <!-- 18.10.2021 13:29:55 -->
+        <title>Kursliste</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=8">
+        <link type="text/css" rel="stylesheet" href="Kursliste-filer/container.css" media="screen">
+        <link type="text/css" rel="stylesheet" href="Kursliste-filer/menu.css" media="screen">
+        <link type="text/css" rel="stylesheet" href="Kursliste-filer/screen.css" media="screen">
+        <link type="text/css" rel="stylesheet" href="Kursliste-filer/print.css" media="print">
+        <!-- jQuery css dependencies -->
+        <link type="text/css" rel="stylesheet" href="Kursliste-filer/jqmWindow.css" media="screen">
+
+        <script type="text/javascript" src="Kursliste-filer/menu.js"></script>
+        <script type="text/javascript" src="Kursliste-filer/engine.js"></script>
+        <script type="text/javascript" src="Kursliste-filer/util.js"></script>
+        <script type="text/javascript" src="Kursliste-filer/FoldHandler.js"></script>
+        <script type="text/javascript" src="Kursliste-filer/LoansHandler.js"></script>
+        <script type="text/javascript" src="Kursliste-filer/RestructuringHandler.js"></script>
+        <script type="text/javascript" src="Kursliste-filer/RefinancingViewHelper.js"></script>
+        <script type="text/javascript" src="Kursliste-filer/manualLoanScript.js"></script>
+		<script type="text/javascript" src="Kursliste-filer/amortizationscheduleOverviewScript.js"></script>
+		<script type="text/javascript" src="Kursliste-filer/loanOverviewScript.js"></script>
+        <script type="text/javascript" src="Kursliste-filer/ShowCostsHandler.js"></script>
+        <script type="text/javascript" src="Kursliste-filer/yahoo-dom-event.js"></script>
+        <script type="text/javascript" src="Kursliste-filer/dragdrop-min.js"></script>
+        <script type="text/javascript" src="Kursliste-filer/container-min.js"></script>
+        <script type="text/javascript" src="Kursliste-filer/netbank.js"></script>
+        <script type="text/javascript" src="Kursliste-filer/validator.jsp"></script>
+        <script type="text/javascript" src="Kursliste-filer/restructuring.js"></script>
+        <script type="text/javascript" src="Kursliste-filer/manual_loan.js"></script>
+        <script type="text/javascript" src="Kursliste-filer/refinancing.js"></script>
+        <script type="text/javascript" src="Kursliste-filer/amort.js"></script>
+        <script type="text/javascript" src="Kursliste-filer/costs.js"></script>
+        <!-- jQuery js dependencies -->
+        <script type="text/javascript" src="Kursliste-filer/jquery-1.js"></script>
+        <script type="text/javascript" src="Kursliste-filer/jqModal.js"></script>
+        <script type="text/javascript" src="Kursliste-filer/consent.js"></script>
+        <script type="text/javascript">
+            
+            function getParentTop() {
+                if (top != null) {
+                    return top;
+                } else if (window.top != null) {
+                    return window.top;
+                }
+                return null;
+            }
+
+            
+            function onLogOffClick() {
+                var parentTop = getParentTop();
+                if (parentTop != null) {
+                    
+                    if (typeof parentTop.disableAutoLogoff == "function") {
+                        parentTop.disableAutoLogoff();
+                    }
+                }
+            }
+
+            
+            function handleOnload() {
+                var outerpage = getParentTop();
+                if (outerpage != null) {
+                    
+                    if (typeof outerpage.onIframeOnload == "function") {
+                        outerpage.onIframeOnload();
+                    }
+                }
+            }
+
+        </script>
+	</head>
+
+	<body onload="handleOnload();"><div id="tooltip42" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip41" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip40" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip39" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip38" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip37" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip36" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip35" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip34" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip33" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip32" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip31" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip30" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip29" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip28" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip27" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip26" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip25" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip24" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip23" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip22" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip21" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip20" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip19" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip18" class="yui-module yui-overlay yui-tt" style="z-index: 2; left: 968px; top: 566px; visibility: hidden;"><div class="bd">Fondskode identificerer entydigt de enkelte obligationsserier.</div><div class="yui-tt-shadow"></div></div><div id="tooltip17" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip16" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip15" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip14" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip13" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip12" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip11" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip10" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip9" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip8" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip7" class="yui-module yui-overlay yui-tt" style="z-index: 2; left: 428px; top: 458px; visibility: hidden;"><div class="bd">Et låns løbetid er det antal år, som lånet løber.</div><div class="yui-tt-shadow"></div></div><div id="tooltip6" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip5" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip4" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip3" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip2" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip1" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div><div id="tooltip0" class="yui-module yui-overlay yui-tt" style="z-index: 2;"><div class="bd"></div></div>
+	    
+		<div id="content">
+			<div class="toolbar right">
+				
+				<a href="http://www.totalkredit.dk/"><img src="Kursliste-filer/icon_home.gif" alt="Luk beregningen"></a> <a href="http://www.totalkredit.dk/" style="vertical-align: top; padding-right: 10px;">Luk beregningen</a>
+				
+			</div>
+            
+			
+			
+            
+			
+
+
+
+
+
+<div class="box" style="overflow: hidden">
+    <h1>Kursliste</h1>
+    <p>Her har du mulighed for at følge med i kurserne på de obligationer, som Totalkredit baserer sine lånetilbud på.</p><p>Kurserne er de officielle gennemsnitskurser fratrukket 0,2 fra NASDAQ OMX Nordic, København, pr. seneste børsdag kl. 17.00.</p><p>Beregningen af den effektive rente efter skat tager udgangspunkt i et lån på 1 mio. kr. inkl. omkostninger.</p><p>For lån med afdragsfrihed er den effektive rente efter skat beregnet ud fra en afdragsfrihed på 10 år.</p>
+    
+        <br>
+        
+            
+                <h1>Belåningsinterval 0-80% af ejerboligens værdi</h1>
+            
+            
+            
+        
+        
+            
+
+            <h4 id="tblheader_1">
+                <img class="tooltip" src="Kursliste-filer/icon_help_nb.gif" alt="Lån med fast rente i hele Lånets løbetid." title="Lån med fast rente i hele Lånets løbetid." id="tooltip0Ctx"><span class="tooltipLabel">
+                Fastforrentet obligationslån med afdrag
+                </span>
+            </h4>
+
+            <table class="printtable">
+                <thead>
+                <tr>
+                    
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <th class="left" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Et låns løbetid er det antal år, som lånet løber." title="Et låns løbetid er det antal år, som lånet løber." id="tooltip1Ctx"><span class="tooltipLabel">Løbetid</span></th>
+                            <th class="right" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Her vises renten på obligationen angivet i procent. Obligationsrente betegnes også kuponrente, rentefod eller pålydende rente." title="Her vises renten på obligationen angivet i procent. Obligationsrente betegnes også kuponrente, rentefod eller pålydende rente." id="tooltip2Ctx"><span class="tooltipLabel">Obligations-<br>renteprocent</span></th>
+                            <th style="width: 12%"></th>
+                            <th style="width: 12%"></th>
+                            <th class="right" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Seneste noterede gennemsnitskurs på fondsbørsen. Kursen anvendes til Lånetilbud, som dit pengeinstitut udarbejder i dag." title="Seneste noterede gennemsnitskurs på fondsbørsen. Kursen anvendes til Lånetilbud, som dit pengeinstitut udarbejder i dag." id="tooltip3Ctx"><span class="tooltipLabel">Tilbudskurs</span></th>
+                            <th class="right" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Fondskode identificerer entydigt de enkelte obligationsserier." title="Fondskode identificerer entydigt de enkelte obligationsserier." id="tooltip4Ctx"><span class="tooltipLabel">Fondskode</span></th>
+                            <th style="width: 12%"></th>
+                            <th class="right" style="width: 13%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Den effektive rente er den pris, det faktisk koster at låne. Ud over lånerenten er der i den effektive rente medregnet kurstab, bidrag, kurtage og stiftelsesomkostninger." title="Den effektive rente er den pris, det faktisk koster at låne. Ud over lånerenten er der i den effektive rente medregnet kurstab, bidrag, kurtage og stiftelsesomkostninger." id="tooltip5Ctx"><span class="tooltipLabel">Effektiv rente<br>efter skat</span></th>
+                        
+                    
+                </tr>
+                </thead>
+                
+                    <tbody><tr>
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                <td class="left">10 år</td>
+                                <td class="right">0,0000 %</td>
+                                <td></td>
+                                <td></td>
+                                <td class="right">97,1480</td>
+                                <td class="right">0952966</td>
+                                <td></td>
+                                <td class="right">1,6300 %</td>
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                <td class="left">10 år</td>
+                                <td class="right">-0,5000 %</td>
+                                <td></td>
+                                <td></td>
+                                <td class="right">95,5200</td>
+                                <td class="right">0953059</td>
+                                <td></td>
+                                <td class="right">1,6300 %</td>
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                <td class="left">15 år</td>
+                                <td class="right">0,5000 %</td>
+                                <td></td>
+                                <td></td>
+                                <td class="right">96,7940</td>
+                                <td class="right">0952958</td>
+                                <td></td>
+                                <td class="right">1,6800 %</td>
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                <td class="left">15 år</td>
+                                <td class="right">0,0000 %</td>
+                                <td></td>
+                                <td></td>
+                                <td class="right">93,8100</td>
+                                <td class="right">0953032</td>
+                                <td></td>
+                                <td class="right">1,7700 %</td>
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                <td class="left">20 år</td>
+                                <td class="right">1,0000 %</td>
+                                <td></td>
+                                <td></td>
+                                <td class="right">97,2690</td>
+                                <td class="right">0952931</td>
+                                <td></td>
+                                <td class="right">1,7800 %</td>
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                <td class="left">20 år</td>
+                                <td class="right">0,5000 %</td>
+                                <td></td>
+                                <td></td>
+                                <td class="right">93,7500</td>
+                                <td class="right">0952710</td>
+                                <td></td>
+                                <td class="right">1,8300 %</td>
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                <td class="left">30 år</td>
+                                <td class="right">1,5000 %</td>
+                                <td></td>
+                                <td></td>
+                                <td class="right">98,1470</td>
+                                <td class="right">0952761</td>
+                                <td></td>
+                                <td class="right">1,8900 %</td>
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                <td class="left">30 år</td>
+                                <td class="right">1,0000 %</td>
+                                <td></td>
+                                <td></td>
+                                <td class="right">93,9640</td>
+                                <td class="right">0952729</td>
+                                <td></td>
+                                <td class="right">1,8600 %</td>
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                <td class="left">30 år</td>
+                                <td class="right">0,5000 %</td>
+                                <td></td>
+                                <td></td>
+                                <td class="right">90,1050</td>
+                                <td class="right">0953024</td>
+                                <td></td>
+                                <td class="right">1,8200 %</td>
+                            
+                        
+                    </tr>
+                
+            </tbody></table>
+        
+            
+
+            <h4 id="tblheader_2">
+                <img class="tooltip" src="Kursliste-filer/icon_help_nb.gif" alt="Lån med fast rente i hele Lånets løbetid og mulighed for afdragsfrihed i op til 10 år." title="Lån med fast rente i hele Lånets løbetid og mulighed for afdragsfrihed i op til 10 år." id="tooltip6Ctx"><span class="tooltipLabel">
+                Fastforrentet obligationslån uden afdrag -op til 10 års afdragsfrihed
+                </span>
+            </h4>
+
+            <table class="printtable">
+                <thead>
+                <tr>
+                    
+                        
+                        
+                        
+                        
+                        
+                            <th class="left" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Et låns løbetid er det antal år, som lånet løber." title="Et låns løbetid er det antal år, som lånet løber." id="tooltip7Ctx"><span class="tooltipLabel">Løbetid</span></th>
+                            <th class="right" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Her vises renten på obligationen angivet i procent. Obligationsrente betegnes også kuponrente, rentefod eller pålydende rente." title="Her vises renten på obligationen angivet i procent. Obligationsrente betegnes også kuponrente, rentefod eller pålydende rente." id="tooltip8Ctx"><span class="tooltipLabel">Obligations-<br>renteprocent</span></th>
+                            <th style="width: 12%"></th>
+                            <th class="right" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Dette er perioden, hvor man ikke betaler afdrag på lånet. Totalkredit har lån med op til 10 års afdragsfrihed." title="Dette er perioden, hvor man ikke betaler afdrag på lånet. Totalkredit har lån med op til 10 års afdragsfrihed." id="tooltip9Ctx"><span class="tooltipLabel">Afdragsfrihed</span></th>
+                            <th class="right" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Seneste noterede gennemsnitskurs på fondsbørsen. Kursen anvendes til Lånetilbud, som dit pengeinstitut udarbejder i dag." title="Seneste noterede gennemsnitskurs på fondsbørsen. Kursen anvendes til Lånetilbud, som dit pengeinstitut udarbejder i dag." id="tooltip10Ctx"><span class="tooltipLabel">Tilbudskurs</span></th>
+                            <th class="right" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Fondskode identificerer entydigt de enkelte obligationsserier." title="Fondskode identificerer entydigt de enkelte obligationsserier." id="tooltip11Ctx"><span class="tooltipLabel">Fondskode</span></th>
+                            <th style="width: 12%"></th>
+                            <th class="right" style="width: 13%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Den effektive rente er den pris, det faktisk koster at låne. Ud over lånerenten er der i den effektive rente medregnet kurstab, bidrag, kurtage og stiftelsesomkostninger." title="Den effektive rente er den pris, det faktisk koster at låne. Ud over lånerenten er der i den effektive rente medregnet kurstab, bidrag, kurtage og stiftelsesomkostninger." id="tooltip12Ctx"><span class="tooltipLabel">Effektiv rente<br>efter skat</span></th>
+                        
+                        
+                        
+                    
+                </tr>
+                </thead>
+                
+                    <tbody><tr>
+                        
+                            
+                            
+                            
+                            
+                            
+                                <td class="left">30 år</td>
+                                <td class="right">1,5000 %</td>
+                                <td></td>
+                                <td class="right">0-10 år</td>
+                                <td class="right">96,6940</td>
+                                <td class="right">0952842</td>
+                                <td></td>
+                                <td class="right">2,0400 %</td>
+                            
+                            
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                            
+                            
+                            
+                            
+                                <td class="left">30 år</td>
+                                <td class="right">1,0000 %</td>
+                                <td></td>
+                                <td class="right">0-10 år</td>
+                                <td class="right">92,6930</td>
+                                <td class="right">0952737</td>
+                                <td></td>
+                                <td class="right">1,9300 %</td>
+                            
+                            
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                            
+                            
+                            
+                            
+                                <td class="left">30 år</td>
+                                <td class="right">0,5000 %</td>
+                                <td></td>
+                                <td class="right">0-10 år</td>
+                                <td class="right">88,9030</td>
+                                <td class="right">0953091</td>
+                                <td></td>
+                                <td class="right">1,8000 %</td>
+                            
+                            
+                            
+                        
+                    </tr>
+                
+            </tbody></table>
+        
+            
+
+            <h4 id="tblheader_3">
+                <img class="tooltip" src="Kursliste-filer/icon_help_nb.gif" alt="Lån med fast rente, i hele Lånets løbetid og mulighed for afdragsfrihed i op til 30 år" title="Lån med fast rente, i hele Lånets løbetid og mulighed for afdragsfrihed i op til 30 år" id="tooltip13Ctx"><span class="tooltipLabel">
+                Fastforrentet obligationslån med mulighed for op til 30 års afdragsfrihed (Belåningsinterval 0-75%)
+                </span>
+            </h4>
+
+            <table class="printtable">
+                <thead>
+                <tr>
+                    
+                        
+                        
+                        
+                        
+                        
+                        
+                            <th class="left" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Et låns løbetid er det antal år, som lånet løber." title="Et låns løbetid er det antal år, som lånet løber." id="tooltip14Ctx"><span class="tooltipLabel">Løbetid</span></th>
+                            <th class="right" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Her vises renten på obligationen angivet i procent. Obligationsrente betegnes også kuponrente, rentefod eller pålydende rente." title="Her vises renten på obligationen angivet i procent. Obligationsrente betegnes også kuponrente, rentefod eller pålydende rente." id="tooltip15Ctx"><span class="tooltipLabel">Obligations-<br>renteprocent</span></th>
+                            <th style="width: 12%"></th>
+                            <th class="right" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Ved belåningsinterval over 60% skal der betales afdrag på lånet. Ved belåningsinterval på max. 60% kan der evt. vælges afdragsfrihed i lånets restløbetid." title="Ved belåningsinterval over 60% skal der betales afdrag på lånet. Ved belåningsinterval på max. 60% kan der evt. vælges afdragsfrihed i lånets restløbetid." id="tooltip16Ctx"><span class="tooltipLabel">Afdragsfrihed</span></th>
+                            <th class="right" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Seneste noterede gennemsnitskurs på fondsbørsen. Kursen anvendes til Lånetilbud, som dit pengeinstitut udarbejder i dag." title="Seneste noterede gennemsnitskurs på fondsbørsen. Kursen anvendes til Lånetilbud, som dit pengeinstitut udarbejder i dag." id="tooltip17Ctx"><span class="tooltipLabel">Tilbudskurs</span></th>
+                            <th class="right" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Fondskode identificerer entydigt de enkelte obligationsserier." title="Fondskode identificerer entydigt de enkelte obligationsserier." id="tooltip18Ctx"><span class="tooltipLabel">Fondskode</span></th>
+                            <th style="width: 12%"></th>
+                            <th class="right" style="width: 13%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Den effektive rente er den pris, det faktisk koster at låne. Ud over lånerenten er der i den effektive rente medregnet kurstab, bidrag, kurtage og stiftelsesomkostninger." title="Den effektive rente er den pris, det faktisk koster at låne. Ud over lånerenten er der i den effektive rente medregnet kurstab, bidrag, kurtage og stiftelsesomkostninger." id="tooltip19Ctx"><span class="tooltipLabel">Effektiv rente<br>efter skat</span></th>
+                        
+                        
+                    
+                </tr>
+                </thead>
+                
+                    <tbody><tr>
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                                <td class="left">30 år</td>
+                                <td class="right">2,0000 %</td>
+                                <td></td>
+                                <td class="right">0-30 år</td>
+                                <td class="right">99,0880</td>
+                                <td class="right">0953288</td>
+                                <td></td>
+                                <td class="right">2,3600 %</td>
+                            
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                                <td class="left">30 år</td>
+                                <td class="right">1,5000 %</td>
+                                <td></td>
+                                <td class="right">0-30 år</td>
+                                <td class="right">93,9930</td>
+                                <td class="right">0953202</td>
+                                <td></td>
+                                <td class="right">2,4100 %</td>
+                            
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                                <td class="left">30 år</td>
+                                <td class="right">1,0000 %</td>
+                                <td></td>
+                                <td class="right">0-30 år</td>
+                                <td class="right">89,4500</td>
+                                <td class="right">0953105</td>
+                                <td></td>
+                                <td class="right">2,4400 %</td>
+                            
+                            
+                        
+                    </tr>
+                
+            </tbody></table>
+        
+            
+
+            <h4 id="tblheader_4">
+                <img class="tooltip" src="Kursliste-filer/icon_help_nb.gif" alt="Lån med variabel rente med rentetilpasning hvert 3. - 10. år (F3-F10) og mulighed for afdragsfrihed i op til 10 år." title="Lån med variabel rente med rentetilpasning hvert 3. - 10. år (F3-F10) og mulighed for afdragsfrihed i op til 10 år." id="tooltip20Ctx"><span class="tooltipLabel">
+                Tilpasningslån
+                </span>
+            </h4>
+
+            <table class="printtable">
+                <thead>
+                <tr>
+                    
+                        
+                            <th class="left" style="width: 17%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Tilpasningslån tilbydes med rentetilpasning hvert 3.-10. år" title="Tilpasningslån tilbydes med rentetilpasning hvert 3.-10. år" id="tooltip21Ctx"><span class="tooltipLabel">Refinan-<br>sieringsfrekvens</span></th>
+                            <th class="right" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Renten bliver fastsat ved udbetaling og efterfølgendeved hver refinansiering. Der er typisk flere refinansieringer i dets løbetid, og renten på lånet er dermed variabel." title="Renten bliver fastsat ved udbetaling og efterfølgendeved hver refinansiering. Der er typisk flere refinansieringer i dets løbetid, og renten på lånet er dermed variabel." id="tooltip22Ctx"><span class="tooltipLabel">Kontantlåns-<br>renteprocent</span></th>
+                            <th style="width: 10%"></th>
+                            <th class="right" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Dette er perioden, hvor man ikke betaler afdrag på lånet. Totalkredit har lån med op til 10 års afdragsfrihed." title="Dette er perioden, hvor man ikke betaler afdrag på lånet. Totalkredit har lån med op til 10 års afdragsfrihed." id="tooltip23Ctx"><span class="tooltipLabel">Afdragsfrihed</span></th>
+                            <th class="right" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Her vises den kurs, der udregnes på baggrund af kurser for de obligationer, der indgår i lånet." title="Her vises den kurs, der udregnes på baggrund af kurser for de obligationer, der indgår i lånet." id="tooltip24Ctx"><span class="tooltipLabel">Vægtet kurs</span></th>
+                            <th style="width: 12%"></th>
+                            <th style="width: 12%"></th>
+                            <th class="right" style="width: 13%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Den effektive rente er den pris, det faktisk koster at låne. Ud over lånerenten er der i den effektive rente medregnet kurstab, bidrag, kurtage og stiftelsesomkostninger." title="Den effektive rente er den pris, det faktisk koster at låne. Ud over lånerenten er der i den effektive rente medregnet kurstab, bidrag, kurtage og stiftelsesomkostninger." id="tooltip25Ctx"><span class="tooltipLabel">Effektiv rente<br>efter skat</span></th>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    
+                </tr>
+                </thead>
+                
+                    <tbody><tr>
+                        
+                            
+                                <td class="left">Hvert 3. år i januar</td>
+                                <td class="right">-0,2875 %</td>
+                                <td></td>
+                                <td class="right">0-10 år</td>
+                                <td class="right">102,8520</td>
+                                <td></td>
+                                <td></td>
+                                <td class="right">0,7800 %</td>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                                <td class="left">Hvert 3. år i juli</td>
+                                <td class="right">-0,2371 %</td>
+                                <td></td>
+                                <td class="right">0-10 år</td>
+                                <td class="right">103,3570</td>
+                                <td></td>
+                                <td></td>
+                                <td class="right">0,8300 %</td>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                                <td class="left">Hvert 4. år i januar</td>
+                                <td class="right">-0,2223 %</td>
+                                <td></td>
+                                <td class="right">0-10 år</td>
+                                <td class="right">107,1560</td>
+                                <td></td>
+                                <td></td>
+                                <td class="right">0,8300 %</td>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                                <td class="left">Hvert 4. år i juli</td>
+                                <td class="right">-0,1144 %</td>
+                                <td></td>
+                                <td class="right">0-10 år</td>
+                                <td class="right">104,1360</td>
+                                <td></td>
+                                <td></td>
+                                <td class="right">0,9200 %</td>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                                <td class="left">Hvert 5. år i januar</td>
+                                <td class="right">-0,0644 %</td>
+                                <td></td>
+                                <td class="right">0-10 år</td>
+                                <td class="right">108,6960</td>
+                                <td></td>
+                                <td></td>
+                                <td class="right">0,8000 %</td>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                                <td class="left">Hvert 5. år i juli</td>
+                                <td class="right">0,0315 %</td>
+                                <td></td>
+                                <td class="right">0-10 år</td>
+                                <td class="right">104,5490</td>
+                                <td></td>
+                                <td></td>
+                                <td class="right">0,8700 %</td>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                                <td class="left">Hvert 6. år i januar</td>
+                                <td class="right">0,0855 %</td>
+                                <td></td>
+                                <td class="right">0-10 år</td>
+                                <td class="right">104,7480</td>
+                                <td></td>
+                                <td></td>
+                                <td class="right">0,9000 %</td>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                                <td class="left">Hvert 7. år i januar</td>
+                                <td class="right">0,2521 %</td>
+                                <td></td>
+                                <td class="right">0-10 år</td>
+                                <td class="right">104,6000</td>
+                                <td></td>
+                                <td></td>
+                                <td class="right">1,0100 %</td>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                                <td class="left">Hvert 8. år i januar</td>
+                                <td class="right">0,3842 %</td>
+                                <td></td>
+                                <td class="right">0-10 år</td>
+                                <td class="right">104,3690</td>
+                                <td></td>
+                                <td></td>
+                                <td class="right">1,0900 %</td>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                                <td class="left">Hvert 9. år i januar</td>
+                                <td class="right">0,5410 %</td>
+                                <td></td>
+                                <td class="right">0-10 år</td>
+                                <td class="right">103,6750</td>
+                                <td></td>
+                                <td></td>
+                                <td class="right">1,1900 %</td>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                                <td class="left">Hvert 10. år i januar</td>
+                                <td class="right">0,6080 %</td>
+                                <td></td>
+                                <td class="right">0-10 år</td>
+                                <td class="right">103,5000</td>
+                                <td></td>
+                                <td></td>
+                                <td class="right">1,2400 %</td>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                    </tr>
+                
+            </tbody></table>
+        
+            
+
+            <h4 id="tblheader_5">
+                <img class="tooltip" src="Kursliste-filer/icon_help_nb.gif" alt="Lån med variabel rente, der reguleres hver 6. måned. Lånet har et renteloft og har mulighed for afdragsfrihed i op til 10 år." title="Lån med variabel rente, der reguleres hver 6. måned. Lånet har et renteloft og har mulighed for afdragsfrihed i op til 10 år." id="tooltip26Ctx"><span class="tooltipLabel">
+                RenteMax
+                </span>
+            </h4>
+
+            <table class="printtable">
+                <thead>
+                <tr>
+                    
+                        
+                        
+                            <th class="left" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Et låns løbetid er det antal år, som lånet løber." title="Et låns løbetid er det antal år, som lånet løber." id="tooltip27Ctx"><span class="tooltipLabel">Løbetid</span></th>
+                            <th class="right" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Renteloft angiver den maksimale grænse for, hvor høj renten kan blive inden for renteloftets løbetid." title="Renteloft angiver den maksimale grænse for, hvor høj renten kan blive inden for renteloftets løbetid." id="tooltip28Ctx"><span class="tooltipLabel">Renteloft</span></th>
+                            <th class="right" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="RenteMax tilbydes med renteloft med forskellige løbetider. Når et renteloft udløber,så erstattes det typisk af et nyt renteloft for en ny periode." title="RenteMax tilbydes med renteloft med forskellige løbetider. Når et renteloft udløber,så erstattes det typisk af et nyt renteloft for en ny periode." id="tooltip29Ctx"><span class="tooltipLabel">Renteloft-<br>løbetid</span></th>
+                            <th class="right" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Dette er perioden, hvor man ikke betaler afdrag på lånet. Totalkredit har lån med op til 10 års afdragsfrihed." title="Dette er perioden, hvor man ikke betaler afdrag på lånet. Totalkredit har lån med op til 10 års afdragsfrihed." id="tooltip30Ctx"><span class="tooltipLabel">Afdragsfrihed</span></th>
+                            <th class="right" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Seneste noterede gennemsnitskurs på fondsbørsen. Kursen anvendes til Lånetilbud, som dit pengeinstitut udarbejder i dag." title="Seneste noterede gennemsnitskurs på fondsbørsen. Kursen anvendes til Lånetilbud, som dit pengeinstitut udarbejder i dag." id="tooltip31Ctx"><span class="tooltipLabel">Tilbudskurs</span></th>
+                            <th class="right" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Fondskode identificerer entydigt de enkelte obligationsserier." title="Fondskode identificerer entydigt de enkelte obligationsserier." id="tooltip32Ctx"><span class="tooltipLabel">Fondskode</span></th>
+                            <th class="right" style="width: 12%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Rente fastsættes for et halvt år ad gangen på baggrund af 6-måneders CIBOR-rente og et evt. tilløg." title="Rente fastsættes for et halvt år ad gangen på baggrund af 6-måneders CIBOR-rente og et evt. tilløg." id="tooltip33Ctx"><span class="tooltipLabel">Renteprocent</span></th>
+                            <th class="right" style="width: 13%; vertical-align: top;"><img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Den effektive rente er den pris, det faktisk koster at låne. Ud over lånerenten er der i den effektive rente medregnet kurstab, bidrag, kurtage og stiftelsesomkostninger." title="Den effektive rente er den pris, det faktisk koster at låne. Ud over lånerenten er der i den effektive rente medregnet kurstab, bidrag, kurtage og stiftelsesomkostninger." id="tooltip34Ctx"><span class="tooltipLabel">Effektiv rente<br>efter skat</span></th>
+                        
+                        
+                        
+                        
+                        
+                        
+                    
+                </tr>
+                </thead>
+                
+                    <tbody><tr>
+                        
+                            
+                            
+                                <td class="left">30 år</td>
+                                <td class="right">1,0000 %</td>
+                                <td class="right">6 år</td>
+                                <td class="right">0-10 år</td>
+                                <td class="right">101,5380</td>
+                                <td class="right">0953121</td>
+                                <td class="right">0,0257 %</td>
+                                <td class="right">0,7400 %</td>
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                    </tr>
+                
+                    <tr>
+                        
+                            
+                            
+                                <td class="left">30 år</td>
+                                <td class="right">1,5000 %</td>
+                                <td class="right">9 år</td>
+                                <td class="right">0-10 år</td>
+                                <td class="right">102,0830</td>
+                                <td class="right">0952672</td>
+                                <td class="right">0,1372 %</td>
+                                <td class="right">0,7900 %</td>
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                    </tr>
+                
+            </tbody></table>
+        
+            
+
+            <h4 id="tblheader_6">
+                <img class="tooltip" src="Kursliste-filer/icon_help_nb.gif" alt="Lån med variabel rente, der reguleres hver 6. måned, og med mulighed for afdragsfrihed i op til 10 år." title="Lån med variabel rente, der reguleres hver 6. måned, og med mulighed for afdragsfrihed i op til 10 år." id="tooltip35Ctx"><span class="tooltipLabel">
+                F-kort
+                </span>
+            </h4>
+
+            <table class="printtable">
+                <thead>
+                <tr>
+                    
+                        
+                        
+                        
+                            <th class="left" style="width: 17%; vertical-align: top;">
+                                <img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Her vises den dato, hvor Lånet næste gang skal refinansieres." title="Her vises den dato, hvor Lånet næste gang skal refinansieres." id="tooltip36Ctx"><span class="tooltipLabel">
+                                    Refinansieringsdato
+                                </span>
+                            </th>
+                            <th class="left" style="width: 12%; vertical-align: top;">
+                                <img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Et låns løbetid er det antal år, som lånet løber." title="Et låns løbetid er det antal år, som lånet løber." id="tooltip37Ctx"><span class="tooltipLabel">
+                                    Løbetid
+                                </span>
+                            </th>
+                            <th class="right" style="width: 12%; vertical-align: top;">
+                                <img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Renten fastsættes for et halvt år af gangen på baggrund af 6-måneders CITA-rente og et evt. tilløg." title="Renten fastsættes for et halvt år af gangen på baggrund af 6-måneders CITA-rente og et evt. tilløg." id="tooltip38Ctx"><span class="tooltipLabel">
+                                    Renteprocent
+                                </span>
+                            </th>
+                            <th class="right" style="width: 12%; vertical-align: top;">
+                                <img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Dette er perioden, hvor man ikke betaler afdrag på lånet. Totalkredit har lån med op til 10 års afdragsfrihed." title="Dette er perioden, hvor man ikke betaler afdrag på lånet. Totalkredit har lån med op til 10 års afdragsfrihed." id="tooltip39Ctx"><span class="tooltipLabel">
+                                    Afdragsfrihed
+                                </span>
+                            </th>
+                            <th class="right" style="width: 12%; vertical-align: top;">
+                                <img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Seneste noterede gennemsnitskurs på fondsbørsen. Kursen anvendes til Lånetilbud, som dit pengeinstitut udarbejder i dag." title="Seneste noterede gennemsnitskurs på fondsbørsen. Kursen anvendes til Lånetilbud, som dit pengeinstitut udarbejder i dag." id="tooltip40Ctx"><span class="tooltipLabel">
+                                    Tilbudskurs
+                                </span>
+                            </th>
+                            <th class="right" style="width: 12%; vertical-align: top;">
+                                <img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Fondskode identificerer entydigt de enkelte obligationsserier." title="Fondskode identificerer entydigt de enkelte obligationsserier." id="tooltip41Ctx"><span class="tooltipLabel">
+                                    Fondskode
+                                </span>
+                            </th>
+                            <th style="width: 7%"></th>
+                            <th class="right" style="width: 13%; vertical-align: top;">
+                                <img class="tooltip" src="Kursliste-filer/icon_help.gif" alt="Den effektive rente er den pris, det faktisk koster at låne. Ud over lånerenten er der i den effektive rente medregnet kurstab, bidrag, kurtage og stiftelsesomkostninger." title="Den effektive rente er den pris, det faktisk koster at låne. Ud over lånerenten er der i den effektive rente medregnet kurstab, bidrag, kurtage og stiftelsesomkostninger." id="tooltip42Ctx"><span class="tooltipLabel">
+                                    Effektiv rente<br>efter skat
+                                </span>
+                            </th>
+                        
+                        
+                        
+                        
+                        
+                    
+                </tr>
+                </thead>
+                
+                    <tbody><tr>
+                        
+                            
+                            
+                            
+                                <td class="left">30.06.2023</td>
+                                <td class="left">30 år</td>
+                                <td class="right">-0,2890 %</td>
+                                <td class="right">0-10 år</td>
+                                <td class="right">99,9170</td>
+                                <td class="right">0952796</td>
+                                <td></td>
+                                <td class="right">0,6500 %</td>
+                            
+                            
+                            
+                            
+                            
+                        
+                    </tr>
+                
+            </tbody></table>
+        
+    
+</div>
+
+
+			<div class="toolbar">
+				<div class="left" style="float: left;"><a href="#top">Til toppen</a></div>
+                
+                    <div class="right" style="float: right;"><a href="#" onclick="window.print();"><img src="Kursliste-filer/icon_print.gif" alt="Udskriv"></a> <a href="#" onclick="window.print();" style="vertical-align: top;">Udskriv</a></div>
+			    
+                <div class="center"><a href="#" onclick="openWindow('disclaimer', '/netbank/BetingelserOgForbehold.do')">Betingelser og forbehold</a></div>
+			</div>
+			
+            <div class="print-disclaimer">
+
+
+
+
+<p><b>Generelt</b><br>
+
+Alle beregninger er baserede på den officielle gennemsnitskurs fra NASDAQ OMX Nordic, København.</p>
+
+<p>Beregningerne bygger på simplificerede forudsætninger, og resultatet 
+er derfor alene vejledende og uden forpligtelse og ansvar for 
+Totalkredit og det låneformidlende pengeinstitut.</p>
+
+<p>Totalkredit tager forbehold for fejl og mangler i oplysninger og beregninger.</p>
+
+<p>Beregningerne kan ikke opfattes som låntilbud. Kontakt dit lokale pengeinstitut, hvis du ønsker et konkret låntilbud.</p>
+
+<p>Du kan læse om de forskellige låntyper på <a href="http://www.totalkredit.dk/TKdk/page?action=page&amp;pageId=176" target="_blank">www.totalkredit.dk</a></p>
+
+<p><b>Omkostninger mv.</b><br>
+Oplysningerne baserer sig på låns aktuelle rente og omkostninger. For 
+lån med variabel rente ændrer renten sig i løbetiden. Der kan også ske 
+ændringer i lånets øvrige omkostninger, fx bidragssatsen. Oplysningerne 
+gælder derfor kun, indtil der måtte ske sådanne ændringer.</p>
+
+<p>Den oplyste bidragssats på nye lån er vejledende. Ved endelig 
+låneudmåling bliver satsen beregnet med udgangspunkt i lånets faktiske 
+sikkerhedsmæssige placering i ejendommen.</p>
+
+<p>Omkostninger ved optagelse og eventuel indfrielse er medfinansieret i
+ beregningerne og der er medtaget omkostninger til variabel og fast 
+tinglysningsafgift. Ved beregning på omlægning af lån overføres 
+tinglysningsafgift fra eventuelle eksisterende lån.</p>
+
+<p>Ekspeditionsgebyr pengeinstitut fastsættes i den enkelte sag af det 
+formidlende pengeinstitut og er anslået til 4.000 kr. i beregningen.</p>
+
+<p>Alle de medtagne omkostninger er anslåede og vil derfor kunne afvige fra et konkret låntilbud.</p>
+
+<p><b>Beskatning</b><br>
+Der er anvendt gældende skattesats for indeværende år for den valgte 
+bopælskommune. Skattesatsen er inkl. skat til stat, kommune og kirke 
+samt sundhedsbidrag. Hvor der ikke er oplyst bopælskommune, er der 
+anvendt en gennemsnitlig sats.</p>
+
+<p>Hvis beregningen omfatter indfrielse af eksisterende lån, og der er 
+anvendt straksindfrielse som indfrielsesmetode, er skatteværdien af 
+differencerenten ikke indregnet.</p>
+
+<p>Ved indfrielse af kontantlån før lånets udløb er der som udgangspunkt
+ skattepligt af en eventuel opnået kursgevinst ved indfrielsen. Der 
+gælder særlige undtagelser for denne regel ved indfrielse i forbindelse 
+med ejerskifte. Skat af eventuel kursgevinst ved indfrielse af 
+kontantlån er ikke taget med i beregningerne.</p>
+
+<p><b>Særligt om boligkøbsberegninger</b><br>
+Beregningerne om boligkøb er skønsmæssige og foretaget på baggrund af de
+ indtastede oplysninger om indtægter og udgifter. Du bør foretage 
+beregningen igen, hvis der sker ændringer i disse forudsætninger.</p>
+
+<p>Beregningerne forudsætter uændrede skatteforhold og tager ikke højde for eventuel restskat.</p>
+
+<p>Ejendomsværdiskatten er beregnet ud fra den anslåede kontantpris.</p>
+
+<p><b>Særligt om refinansieringsberegninger</b><br>
+Ændring af refinansieringsfrekvens og øvrige vilkår i 
+refinansieringsaftalen kan kun ske ved at indgå en ny 
+refinansieringsaftale i forbindelse med en refinansiering.</p>
+
+<p>Rentesatsen pr. år er skønsmæssigt beregnet ud fra lånets 
+refinansieringsdato. Kursen på lånets obligationer på 
+refinansieringstidspunktet er afgørende for rentesatsen.</p>
+
+<p><b>Særligt om evt. kurstabsfradrag</b><br>
+En konto knyttet til et lån fra en før den 1. januar 1996 foretaget 
+omlægning af et kontantlån optaget forud for den 19. maj 1993. Kontoens 
+indestående er udtryk for forskellen mellem det gamle kontantlåns 
+kontantrestgæld og obligationsrestgæld. Fradraget fordeles med lige 
+store portioner over det nye låns løbetid.</p>
+
+<p>Hvis løbetiden for det nye lån er kortere end restløbetiden på det 
+lån, der skal indfries, kan der ikke ske overførsel af kurstabsfradrag. 
+Der kan heller ikke overføres kurstabsfradrag, hvis det årlige beløb 
+efter fordeling over det nye låns løbetid bliver mindre end 100 kr.</p>
+
+<form action="#" onsubmit="window.close()">
+    <div style="padding-bottom: 10px;" class="field">
+        <input class="button" type="submit" title="Klik her for at lukke dette vindue" value="Luk vindue">
+    </div>
+</form></div>
+            
+        </div>
+		<script type="text/javascript">/* <![CDATA[ */
+new YAHOO.widget.Tooltip("tooltip0", {context: "tooltip0Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip1", {context: "tooltip1Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip2", {context: "tooltip2Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip3", {context: "tooltip3Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip4", {context: "tooltip4Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip5", {context: "tooltip5Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip6", {context: "tooltip6Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip7", {context: "tooltip7Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip8", {context: "tooltip8Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip9", {context: "tooltip9Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip10", {context: "tooltip10Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip11", {context: "tooltip11Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip12", {context: "tooltip12Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip13", {context: "tooltip13Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip14", {context: "tooltip14Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip15", {context: "tooltip15Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip16", {context: "tooltip16Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip17", {context: "tooltip17Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip18", {context: "tooltip18Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip19", {context: "tooltip19Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip20", {context: "tooltip20Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip21", {context: "tooltip21Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip22", {context: "tooltip22Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip23", {context: "tooltip23Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip24", {context: "tooltip24Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip25", {context: "tooltip25Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip26", {context: "tooltip26Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip27", {context: "tooltip27Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip28", {context: "tooltip28Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip29", {context: "tooltip29Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip30", {context: "tooltip30Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip31", {context: "tooltip31Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip32", {context: "tooltip32Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip33", {context: "tooltip33Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip34", {context: "tooltip34Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip35", {context: "tooltip35Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip36", {context: "tooltip36Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip37", {context: "tooltip37Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip38", {context: "tooltip38Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip39", {context: "tooltip39Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip40", {context: "tooltip40Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip41", {context: "tooltip41Ctx", autodismissdelay: 60000, monitorresize: false});
+new YAHOO.widget.Tooltip("tooltip42", {context: "tooltip42Ctx", autodismissdelay: 60000, monitorresize: false});
+/* ]]> */</script>
+		
+	
+</body></html>
