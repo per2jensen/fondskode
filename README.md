@@ -10,6 +10,8 @@ InfluxDB bliver leveret med et pæresimpelt interface til at generere en graf me
 
 Jeg forudsætter du har en InfluxDB kørende i en Docker container.
 
+## InfluxDB
+
 Check om der er forbindelse fra din host
 ````
 curl -sl -I localhost:8086/ping
@@ -20,6 +22,7 @@ Opret en database (jeg antager at brugeren er oprettet)
 curl -I -G -X GET http://localhost:8086/query -u <db brugernavn>:<db bruger password>  --data-urlencode "q=CREATE DATABASE fondskode"
 ````
 
+## Byg en docker container
 Clone dette repo til din maskine
 
 "cd" til <repoet>/src/python. Kopier config.json.template --> config.json og ret de nødvendige parametre til dit brug.
@@ -36,6 +39,14 @@ Kør docker containeren (--net hassio, fordi min InfluxDB er installeret via Hom
 docker run --net hassio --rm --name fondskode-getter -it pj/fondskode:latest
 ````
 
+## Systemd 
+Smid de to filer fra etc/systemd/system biblioteket over i /etc/systemd/system.
+Dermed bliver programmet kørt en gang i døgnet, ind under midnat.
+
+Kør derefter denne kommando
+````
+sudo systemctl daemon-reload 
+````
 # Links
 
   [Totalkredit siden med kurser](https://netbank.totalkredit.dk/netbank/showStockExchangeInternal.do)

@@ -1,0 +1,13 @@
+[Unit]
+Description=Gem kursen på realkredit lån i InfluxDB
+Requires=docker.service
+
+[Service]
+Type=exec
+ExecStart=docker run --net hassio --rm --name fondskode-getter pj/fondskode:latest
+Restart=no
+
+[Install]
+WantedBy=timers.target
+
+
