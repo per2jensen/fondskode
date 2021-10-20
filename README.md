@@ -43,5 +43,6 @@ docker run --net hassio --rm --name fondskode-getter -it pj/fondskode:latest
   [Home Assistant](https://www.home-assistant.io/)
   
   [God side om Docker netværk](https://www.tutorialworks.com/container-networking/)
+  
   [Pædagogisk side om "connection refused, indefra en container](https://pythonspeed.com/articles/docker-connection-refused/)
 
