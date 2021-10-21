@@ -44,7 +44,7 @@ jobs:
               curl -sl -I http://localhost:8086/ping
 
       - name: create db user
-        run:  curl "http://localhost:8086/query" --data-urlencode "q=CREATE USER CI_USER WITH PASSWORD 'thesecret' WITH ALL PRIVILEGES"
+        run:  curl -s -I "http://localhost:8086/query" --data-urlencode "q=CREATE USER CI_USER WITH PASSWORD 'thesecret' WITH ALL PRIVILEGES"
 
       - name: create database
         run:  curl -I -G -X GET http://localhost:8086/query -u CI_USER:thesecret  --data-urlencode "q=CREATE DATABASE CI_DB"
@@ -56,8 +56,8 @@ jobs:
         run:  sudo docker build --tag pj/fondskode  src
 
       - name: run fondskode and get kurs
-        run:  docker run --rm  --name fondskode-getter pj/fondskode:latest
+        run:  docker run --rm  --name fondskode-getter --add-host host.docker.internal:host-gateway  pj/fondskode:latest
 
       - name: query DB
-        run:  curl "http://localhost:8086/query" -u CI_USER:thesecret  --data-urlencode '"SELECT "value" FROM "fondskode"."autogen"."kurs"' 
+        run:  curl -s -I "http://localhost:8086/query" -u CI_USER:thesecret  --data-urlencode '"SELECT "value" FROM "fondskode"."autogen"."kurs"' 
 
