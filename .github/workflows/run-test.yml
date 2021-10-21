@@ -59,5 +59,15 @@ jobs:
         run:  docker run --rm  --name fondskode-getter --add-host host.docker.internal:host-gateway  pj/fondskode:latest
 
       - name: query DB
-        run:  curl  -G   "http://localhost:8086/query?pretty=true&db=CI_DB" -u CI_USER:thesecret  --data-urlencode "q=SELECT \"value\" FROM \"CI_DB\".\"autogen\".\"kurs\""
+        run:  |
+              RESULT=$(curl -s -G "http://localhost:8086/query?pretty=true&db=CI_DB" -u CI_USER:thesecret  --data-urlencode "q=SELECT \"value\" FROM \"CI_DB\".\"autogen\".\"kurs\"")
+              echo $RESULT
+              echo ---- ============ ----
+              KURS=$(echo $RESULT| jq .results[].series[].values[1][1])
+              echo Kurs: $KURS
+              if [[ $KURS == "" ]]; then exit 1; fi
+
+              
+
+
 
