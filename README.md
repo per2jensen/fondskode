@@ -1,6 +1,6 @@
-# Gem kusen på en Totalkredit obligationsserie
+# Gem kursen på en Totalkredit obligationsserie
 
-Jeg har et fastforrentet lån hos Totalkredit, og tænker det kunne være spændene at se kursudviklingen på det over tid.
+Jeg har et fastforrentet lån hos Totalkredit, og tænker det kunne være spændene at se kursudviklingen over tid.
 
 # Min use case
 Jeg har en Home Assistant instans med en InfluxDB time series database kørende, så det er naturlig at proppe nogle kursværdier ned i den.
@@ -8,7 +8,7 @@ InfluxDB bliver leveret med et pæresimpelt interface til at generere en graf me
 
 # Installation
 
-Jeg forudsætter du har en InfluxDB kørende i en Docker container.
+Jeg forudsætter du har en InfluxDB kørende i en Docker container
 
 ## InfluxDB
 
