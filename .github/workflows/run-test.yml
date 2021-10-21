@@ -31,6 +31,9 @@ jobs:
       influxdb:
         # Docker Hub image
         image: influxdb:1.8
+        env:
+          INFLUXDB_ADMIN_USER=CI_USER
+          INFLUXDB_ADMIN_PASSWORD=thesecret
         #
         ports:
           - 8086:8086
@@ -42,9 +45,6 @@ jobs:
         run:  |
               sleep 15
               curl -sl -I http://localhost:8086/ping
-
-      - name: create db user
-        run:  curl -s -I "http://localhost:8086/query" --data-urlencode "q=CREATE USER CI_USER WITH PASSWORD 'thesecret' WITH ALL PRIVILEGES"
 
       - name: create database
         run:  curl -I -G -X GET http://localhost:8086/query -u CI_USER:thesecret  --data-urlencode "q=CREATE DATABASE CI_DB"
