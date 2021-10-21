@@ -40,19 +40,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # https://github.com/marketplace/actions/influxdb-action
-      - name: Setup InfluxDB
-        uses: influxdata/influxdb-action@v3
-        with:
-          influxdb_version: 1.8.10
-          influxdb_org: influxdata
-          influxdb_user: CI_USER
-          influxdb_password: thesecret
-          influxdb_bucket: dummy
-
-
       - name: check Influx is up
-        run:  curl -sl -I http://localhost:8086/ping
+        run:  |
+              sleep 15
+              curl -sl -I http://localhost:8086/ping
 
       - name: create db user
         run:  curl "http://localhost:8086/query" --data-urlencode "q=CREATE USER CI_USER WITH PASSWORD 'thesecret' WITH ALL PRIVILEGES"
