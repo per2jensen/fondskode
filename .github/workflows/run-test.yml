@@ -40,6 +40,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      # https://github.com/marketplace/actions/influxdb-action
       - name: Setup InfluxDB
         uses: influxdata/influxdb-action@v3
         with:
