@@ -63,9 +63,9 @@ jobs:
               RESULT=$(curl -s -G "http://localhost:8086/query?pretty=true&db=CI_DB" -u CI_USER:thesecret  --data-urlencode "q=SELECT \"value\" FROM \"CI_DB\".\"autogen\".\"kurs\"")
               echo $RESULT
               echo ---- ============ ----
-              KURS=$(echo $RESULT| jq .results[].series[].values[1][1])
+              KURS=$(echo $RESULT| jq .results[].series[].values[0][1])
               echo Kurs: $KURS
-              if [[ $KURS == "" ]]; then exit 1; fi
+              if [[ $KURS == "null" ]]; then exit 1; fi
 
               
 
