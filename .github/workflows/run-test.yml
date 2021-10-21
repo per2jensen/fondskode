@@ -46,7 +46,7 @@ jobs:
         run:  sudo docker network create -d bridge CI-NET
 
       - name: spin up InfluxDB
-        run:  sudo docker run -d --network="CI-NET" --network-alias="CI-influxdb" influxdb:1.8
+        run:  sudo docker run -d --network="CI-NET" --network-alias="CI-influxdb" -p 8086:8086 influxdb:1.8
 
       - name: check Influx is up
         run:  curl -sl -I localhost:8086/ping
