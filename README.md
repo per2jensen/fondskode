@@ -55,5 +55,7 @@ sudo systemctl daemon-reload
   
   [God side om Docker netværk](https://www.tutorialworks.com/container-networking/)
   
-  [Pædagogisk side om "connection refused, indefra en container](https://pythonspeed.com/articles/docker-connection-refused/)
+  [Pædagogisk side om "connection refused", indefra en container](https://pythonspeed.com/articles/docker-connection-refused/)
+
+  [Hvis du vil ramme host localhost indefra en container....](https://www.cloudsavvyit.com/14114/how-to-connect-to-localhost-within-a-docker-container/)
 
