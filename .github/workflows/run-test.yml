@@ -1,0 +1,44 @@
+# This workflow does the following
+#   - spins up an InfluxDB container
+#   - creates a DB user and DB
+#   - specifies a docket network name
+#
+#   - builds the fondskode image
+#   - runs the fondskode container
+#   - verifies a measurement has been stored in InfluxDB
+
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "test"
+  test:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Build fondskode image
+        run:  sudo sudo docker build --tag pj/fondskode -f ../src/Dockerfile
+
+      
+      
+#      - name: Run the test script
+#        run: |
+#          chmod +x $GITHUB_WORKSPACE/test/run-test.sh
+#          $GITHUB_WORKSPACE/test/run-test.sh
