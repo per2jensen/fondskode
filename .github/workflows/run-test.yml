@@ -1,7 +1,6 @@
 # This workflow does the following
 #   - spins up an InfluxDB container
 #   - creates a DB user and DB
-#   - specifies a docket network name
 #
 #   - builds the fondskode image
 #   - runs the fondskode container
@@ -55,10 +54,10 @@ jobs:
       - name: Build fondskode image
         run:  sudo docker build --tag pj/fondskode  src
 
-      - name: run fondskode and get kurs
+      - name: run fondskode and get kurs value
         run:  docker run --rm  --name fondskode-getter --add-host host.docker.internal:host-gateway  pj/fondskode:latest
 
-      - name: query DB
+      - name: query DB for the stored kurs value
         run:  |
               RESULT=$(curl -s -G "http://localhost:8086/query?pretty=true&db=CI_DB" -u CI_USER:thesecret  --data-urlencode "q=SELECT \"value\" FROM \"CI_DB\".\"autogen\".\"kurs\"")
               echo $RESULT
