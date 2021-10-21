@@ -40,7 +40,7 @@ jobs:
         run:  sudo docker build --tag pj/fondskode  src
 
       - name: Pull InfluxDB 1.8
-      - run:  sudo docker pull influxdb:1.8
+        run:  sudo docker pull influxdb:1.8
 
       - name: create docker CI network
         run:  sudo docker network create -d bridge CI-NET
