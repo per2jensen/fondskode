@@ -36,7 +36,6 @@ if __name__ == '__main__':
 
     with open("config.json") as json_data_file:
         config = json.load(json_data_file)
-    print(config)
 
     if args.test:
         with open("../../test/Totalkredit-kurser.html") as f:
