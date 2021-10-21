@@ -33,6 +33,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - name: use CI test config file
+        run:  cp test/python/config.json.test src/python/config.json
+
       - name: Build fondskode image
         run:  sudo docker build --tag pj/fondskode  src
 
