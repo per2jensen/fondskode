@@ -23,6 +23,21 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  container-job:
+      # Containers must run in Linux based operating systems
+      runs-on: ubuntu-latest
+      # Docker Hub image that `container-job` executes in
+      container: influxdb:1.8
+
+      # Service containers to run with `container-job`
+      services:
+        # Label used to access the service container
+        influxdb:
+          # Docker Hub image
+          image: influxdb:1.8
+          #
+          ports:
+            - 8086:8086
   # This workflow contains a single job called "test"
   test:
     # The type of runner that the job will run on
@@ -39,13 +54,14 @@ jobs:
       - name: create docker CI network
         run:  sudo docker network create -d bridge CI-NET
 
-      - name: spin up InfluxDB
-        run:  sudo docker run -d --network="CI-NET" -p 8086:8086 influxdb:1.8
+      # - name: spin up InfluxDB
+      #   run:  sudo docker run -d --network CI-NET --network-alias CI-influxdb -p 8086:8086 influxdb:1.8
 
-      - name: inspect influx container
-        run:  |
-              ID=$(sudo docker ps|tail -n 1|cut -d" " -f1)
-              sudo docker inspect $ID
+      # - name: inspect influx container
+      #   run:  |
+      #         ID=$(sudo docker ps|tail -n 1|cut -d" " -f1)
+      #         sudo docker network ls
+      #         sudo docker inspect $ID
 
       - name: check Influx is up
         run:  curl -sl -I http://localhost:8086/ping
@@ -63,7 +79,7 @@ jobs:
         run:  sudo docker build --tag pj/fondskode  src
 
       - name: run fondskode and get kurs
-        run:  docker run --net="CI-NET" --rm  --name fondskode-getter pj/fondskode:latest
+        run:  docker run --rm  --name fondskode-getter pj/fondskode:latest
 
       - name: query DB
         run:  curl "http://localhost:8086/query" -u CI_USER:thesecret  --data-urlencode '"SELECT "value" FROM "fondskode"."autogen"."kurs"' 
