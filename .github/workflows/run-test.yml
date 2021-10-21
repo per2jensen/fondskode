@@ -42,8 +42,8 @@ jobs:
       - name: spin up InfluxDB
         run:  sudo docker run -d --network="CI-NET" --network-alias="CI-influxdb" -p 8086:8086 influxdb:1.8
 
-      - name: check Influx is up
-        run:  curl -sl -I http://localhost:8086/ping
+      #- name: check Influx is up
+      #  run:  curl -sl -I http://localhost:8086/ping
 
       - name: create db user
         run:  curl "http://localhost:8086/query" --data-urlencode "q=CREATE USER CI_USER WITH PASSWORD 'thesecret' WITH ALL PRIVILEGES"
