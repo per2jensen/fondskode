@@ -32,8 +32,8 @@ jobs:
         # Docker Hub image
         image: influxdb:1.8
         env:
-          INFLUXDB_ADMIN_USER=CI_USER
-          INFLUXDB_ADMIN_PASSWORD=thesecret
+          INFLUXDB_ADMIN_USER: CI_USER
+          INFLUXDB_ADMIN_PASSWORD: thesecret
         #
         ports:
           - 8086:8086
