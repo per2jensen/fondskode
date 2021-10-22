@@ -1,9 +1,0 @@
-{
-  "FONDSKODE"       : "952737",
-  "TOTALKREDIT_URL" : "https://netbank.totalkredit.dk/netbank/showStockExchangeInternal.do",
-  "DOCKER_NET"      : "CI-NET",
-  "INFLUX_HOST"     : "host.docker.internal",
-  "INFLUX_USER"     : "CI_USER",
-  "INFLUX_PASS"     : "thesecret",
-  "INFLUX_DB"       : "CI_DB"
-}
