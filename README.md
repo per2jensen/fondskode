@@ -6,19 +6,25 @@ Jeg har et fastforrentet lån hos Totalkredit, og tænker det kunne være spænd
 Jeg har en Home Assistant instans med en InfluxDB time series database kørende, så det er naturlig at proppe nogle kursværdier ned i den.
 InfluxDB bliver leveret med et pæresimpelt interface til at generere en graf med.
 
-
 # Byg & test applikationen
 
 scriptet test/build-run.sh gør følgende:
 
-  - bygger applikationen
+  - bygger applikationen i et docker image
   - spinder en InfluxDB 1.8 container op
   - opretter en database
-  - afvikler applikationen
-  - checker at en kurs værdi er gemt i databasen
-  - stopper DB
+  - afvikler applikationen i en container (finder kursen og gemmer den)
+  - checker at kurs værdien er gemt i databasen
+  - stopper InfluxDB
 
 Det er nemt at sætte dine egne Influx connection parametre ind, kig i scriptet for at se hvordan.
+
+Se og test scriptet på denne måde:
+
+````
+git clone https://github.com/per2jensen/fondskode.git
+fondskode/test/build-run.sh
+````
 
 ## Systemd 
 Smid de to filer fra etc/systemd/system biblioteket over i /etc/systemd/system.

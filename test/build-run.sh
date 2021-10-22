@@ -1,6 +1,9 @@
 #! /bin/bash
 
-docker build --tag per2jensen/fondskode  ../src
+SCRIPTPATH=`realpath $0`
+SCRIPTDIRPATH=`dirname $SCRIPTPATH`
+
+docker build --tag per2jensen/fondskode  $SCRIPTDIRPATH/../src
 
 echo Spin up InfluxDB 1.8
 docker run -d \
