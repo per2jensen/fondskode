@@ -26,6 +26,14 @@ git clone https://github.com/per2jensen/fondskode.git
 fondskode/test/build-run.sh
 ````
 
+# Kør applikationen (uden byg)
+
+fondskode applikationen ligger på Docker Hub. Du kan se den køre på denne måde:
+````
+git clone https://github.com/per2jensen/fondskode.git
+fondskode/test/run.sh
+````
+
 ## Systemd scheduling
 Smid de to filer fra etc/systemd/system biblioteket over i /etc/systemd/system.
 Dermed bliver programmet kørt en gang i døgnet, ind under midnat.
@@ -33,6 +41,23 @@ Dermed bliver programmet kørt en gang i døgnet, ind under midnat.
 Kør derefter denne kommando
 ````
 sudo systemctl daemon-reload 
+````
+
+# Docker Hub
+
+Der ligger et færdigbygget image på [Docker Hub)(https://hub.docker.com/repository/registry-1.docker.io/per2jensen/fondskode)
+
+## Offentlig nøgle
+Images på Docker Hub er signeret af mig.
+
+Den offentlige nøgle er denne:
+````
+-----BEGIN PUBLIC KEY-----
+role: fondskode
+
+MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEy73oXfqT1Sw/yEymBvMoGZNi7YA2
+DLGahWTwEMrCa7zdUSXySXm+6e2KLgtM2Xv+i5YzxZ3GGJJZHVPnu139Uw==
+-----END PUBLIC KEY-----
 ````
 # Links
 
@@ -46,3 +71,4 @@ sudo systemctl daemon-reload
 
   [Hvis du vil ramme host localhost indefra en container....](https://www.cloudsavvyit.com/14114/how-to-connect-to-localhost-within-a-docker-container/)
 
+  [Signing af docker images](https://betterprogramming.pub/docker-content-trust-security-digital-signatures-eeae9348140d)
