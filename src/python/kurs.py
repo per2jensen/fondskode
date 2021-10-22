@@ -1,15 +1,15 @@
 import argparse
 from influxdb import InfluxDBClient
-import json
+import os
 import requests
 import sys
 import pandas as pd
 
-# Realkredit lån, der kigges efter
-FONDSKODE=0 # beware: Pandas strips the leading "0"
-TOTALKREDIT_URL=""
 KURS=0.0
 
+# Miljøvariabler givet til docker container
+FONDSKODE=0 # beware: Pandas strips the leading "0"
+TOTALKREDIT_URL=""
 INFLUX_HOST="" # the hostname on the Docker network influx is deployed to
 INFLUX_USER=''
 INFLUX_PASS=''
@@ -21,10 +21,6 @@ def init_argparse() -> argparse.ArgumentParser:
         description="Hent kursen for en fondskode hos TotalKredit."
     )
     parser.add_argument(
-        "-c", "--configfile", dest="config", help="configfil placering", required=True
-    )
-
-    parser.add_argument(
         "-t", "--test", action="store_true", dest="test", help="brug kurserne fra fil i test biblioteket"
     )
     return parser
@@ -34,21 +30,18 @@ if __name__ == '__main__':
     parser = init_argparse()
     args = parser.parse_args()
 
-    with open("config.json") as json_data_file:
-        config = json.load(json_data_file)
+    FONDSKODE       = int(os.environ["FONDSKODE"])
+    TOTALKREDIT_URL = os.environ["TOTALKREDIT_URL"]
+    INFLUX_HOST     = os.environ["INFLUX_HOST"]
+    INFLUX_USER     = os.environ["INFLUX_USER"]
+    INFLUX_PASS     = os.environ["INFLUX_PASS"]
+    INFLUX_DB       = os.environ["INFLUX_DB"]
 
     if args.test:
         with open("../../test/Totalkredit-kurser.html") as f:
             html_text = f.read()
     else:
-        totalkredit_url = config["TOTALKREDIT_URL"]
-        html_text = requests.get(totalkredit_url).text
-
-    FONDSKODE   = int(config["FONDSKODE"])
-    INFLUX_HOST = config["INFLUX_HOST"]
-    INFLUX_USER = config["INFLUX_USER"]
-    INFLUX_PASS = config["INFLUX_PASS"]
-    INFLUX_DB   = config["INFLUX_DB"]
+        html_text = requests.get(TOTALKREDIT_URL).text
 
     df = pd.read_html(html_text)
     fondskode_fundet=False

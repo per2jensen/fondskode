@@ -4,7 +4,8 @@ Requires=docker.service
 
 [Service]
 Type=exec
-ExecStart=docker run --net hassio --rm --name fondskode-getter pj/fondskode:latest
+#  "--net haasio" virker for min Home Assistant installation 
+ExecStart=docker run --net hassio --rm  per2jensen/fondskode:latest
 Restart=no
 
 [Install]
