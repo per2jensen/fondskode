@@ -26,7 +26,7 @@ git clone https://github.com/per2jensen/fondskode.git
 fondskode/test/build-run.sh
 ````
 
-## Systemd 
+## Systemd scheduling
 Smid de to filer fra etc/systemd/system biblioteket over i /etc/systemd/system.
 Dermed bliver programmet kørt en gang i døgnet, ind under midnat.
 
