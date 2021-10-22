@@ -6,6 +6,7 @@ Jeg har et fastforrentet lån hos Totalkredit, og tænker det kunne være spænd
 Jeg har en Home Assistant instans med en InfluxDB time series database kørende, så det er naturlig at proppe nogle kursværdier ned i den.
 InfluxDB bliver leveret med et pæresimpelt interface til at generere en graf med.
 
+
 # Byg & test applikationen
 
 scriptet test/build-run.sh gør følgende:
