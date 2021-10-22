@@ -18,7 +18,7 @@ scriptet test/build-run.sh gør følgende:
   - stopper InfluxDB
 
 Det er nemt at sætte dine egne Influx connection parametre ind, kig i scriptet for at se hvordan.
-
+Vær opmærksom på, at du skal have [Docker](https://www.docker.com/) installeret.
 Se og test scriptet på denne måde:
 
 ````
@@ -28,11 +28,13 @@ fondskode/test/build-run.sh
 
 # Kør applikationen (uden byg)
 
-fondskode applikationen ligger på Docker Hub. Du kan se den køre på denne måde:
+Fondskode applikationen ligger på Docker Hub. Du kan se den køre på denne måde:
+
 ````
 git clone https://github.com/per2jensen/fondskode.git
 fondskode/test/run.sh
 ````
+Vær opmærksom på, at du skal have [Docker](https://www.docker.com/) installeret.
 
 ## Systemd scheduling
 Smid de to filer fra etc/systemd/system biblioteket over i /etc/systemd/system.
