@@ -48,24 +48,27 @@ if __name__ == '__main__':
     for tabel in df:
         for row in tabel.values:
             for el in row:
-                if el == FONDSKODE:
-                    KURS=row[4]/10000
-                    fondskode_fundet = True
-                    break
+                try:
+                    if int(el) == FONDSKODE:
+                        KURS=row[4]/10000
+                        fondskode_fundet = True
+                        break
+                except:
+                    pass
             if fondskode_fundet:
                 break
         if fondskode_fundet:
             break
 
     if fondskode_fundet:
-        print("Fondskode: " + str(FONDSKODE))
-        print("Kurs: " + str(KURS))
+        print("Fondskode: '{0}'".format(FONDSKODE))
+        print("Kurs: {0}".format(KURS))
 
         client = InfluxDBClient(host=INFLUX_HOST, port=8086, username=INFLUX_USER, password=INFLUX_PASS, database=INFLUX_DB)
-        line = 'kurs,fondskode={0} value={1}'.format(FONDSKODE, KURS) 
+        line = 'kurs,fondskode={0} value={1}'.format(str(FONDSKODE), KURS)
         client.write([line], {'db': INFLUX_DB }, 204, 'line')
         client.close()
         sys.exit(0)
     else:
-        print("Error: Fondskode '" + str(FONDSKODE) + "' blev ikke fundet")
+        print("Error: Fondskode '{0}' blev ikke fundet".format(str(FONDSKODE)))
         sys.exit(1)

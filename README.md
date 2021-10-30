@@ -36,7 +36,47 @@ fondskode/test/run.sh
 ````
 Vær opmærksom på, at du skal have [Docker](https://www.docker.com/) installeret.
 
-## Systemd scheduling
+# Kør applikationen og gem i en Home Assistant InfluxDB
+
+  For at programmet kan forbinde til InfluxDB på Home Assistant docker netværket, skal du kende hostname.
+  Det kan findes på denne måde:
+  ````
+  docker network ls
+  ````
+  
+  som måske giver noget som dette:
+  ````
+  NETWORK ID     NAME      DRIVER    SCOPE
+  ac10b63fd2a7   bridge    bridge    local
+  292272e9dbc0   hassio    bridge    local
+  4401ed03b0bc   host      host      local
+  e6ac28b3b92b   none      null      local
+  ````
+
+
+  "hassio" er netværket som Home Assistant opretter (2021-10-30). Nu kan du finde hostnavnet på din InfluxDB container på denne måde:
+  ````
+  docker network inspect hassio|grep -i influxdb
+    "Name": "addon_a0d7b954_influxdb"
+  ````
+
+  Navnet er således "addon_a0d7b954_influxdb". Det sætter du ind som miljø variabel i shell scriptet nedenfor:
+  ````
+    #! /bin/bash
+
+    docker run \
+    -e FONDSKODE='952737' \
+    -e TOTALKREDIT_URL='https://netbank.totalkredit.dk/netbank/showStockExchangeInternal.do' \
+    -e INFLUX_HOST='addon_a0d7b954_influxdb' \
+    -e INFLUX_USER='<din influx user>' \
+    -e INFLUX_PASS='<din influx users password' \
+    -e INFLUX_DB='<fondskode databasen>' \
+    --net hassio \
+    --rm  -it per2jensen/fondskode:latest
+    ````
+
+
+# Systemd scheduling
 Smid de to filer fra etc/systemd/system biblioteket over i /etc/systemd/system.
 Dermed bliver programmet kørt en gang i døgnet, ind under midnat.
 
