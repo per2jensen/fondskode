@@ -7,14 +7,6 @@ import pandas as pd
 
 KURS=0.0
 
-# Miljøvariabler givet til docker container
-FONDSKODE=0 # beware: Pandas strips the leading "0"
-TOTALKREDIT_URL=""
-INFLUX_HOST="" # the hostname on the Docker network influx is deployed to
-INFLUX_USER=''
-INFLUX_PASS=''
-INFLUX_DB=''
-
 def init_argparse() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         usage="%(prog)s [OPTION] [FILE]...",
@@ -30,12 +22,14 @@ if __name__ == '__main__':
     parser = init_argparse()
     args = parser.parse_args()
 
-    FONDSKODE       = int(os.environ["FONDSKODE"])
+    FONDSKODE       = int(os.environ["FONDSKODE"])  # beware: Pandas strips the leading "0"
     TOTALKREDIT_URL = os.environ["TOTALKREDIT_URL"]
-    INFLUX_HOST     = os.environ["INFLUX_HOST"]
+    INFLUX_HOST     = os.environ["INFLUX_HOST"]     # the hostname on the Docker network influx is deployed to
     INFLUX_USER     = os.environ["INFLUX_USER"]
     INFLUX_PASS     = os.environ["INFLUX_PASS"]
     INFLUX_DB       = os.environ["INFLUX_DB"]
+    DB_INSERT       = os.getenv("DB_INSERT", "TRUE").lower() in ('true', '1', 't')
+    
 
     if args.test:
         with open("../../test/Totalkredit-kurser.html") as f:
@@ -64,10 +58,11 @@ if __name__ == '__main__':
         print("Fondskode: '{0}'".format(FONDSKODE))
         print("Kurs: {0}".format(KURS))
 
-        client = InfluxDBClient(host=INFLUX_HOST, port=8086, username=INFLUX_USER, password=INFLUX_PASS, database=INFLUX_DB)
-        line = 'kurs,fondskode={0} value={1}'.format(str(FONDSKODE), KURS)
-        client.write([line], {'db': INFLUX_DB }, 204, 'line')
-        client.close()
+        if DB_INSERT:
+            client = InfluxDBClient(host=INFLUX_HOST, port=8086, username=INFLUX_USER, password=INFLUX_PASS, database=INFLUX_DB)
+            line = 'kurs,fondskode={0} value={1}'.format(str(FONDSKODE), KURS)
+            client.write([line], {'db': INFLUX_DB }, 204, 'line')
+            client.close()
         sys.exit(0)
     else:
         print("Error: Fondskode '{0}' blev ikke fundet".format(str(FONDSKODE)))

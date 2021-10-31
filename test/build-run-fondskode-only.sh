@@ -18,4 +18,5 @@ docker run \
   -e INFLUX_USER='DUMMY' \
   -e INFLUX_PASS='DUMMY' \
   -e INFLUX_DB='DUMMY' \
+  -e DB_INSERT='FALSE' \
   --rm  -it per2jensen/fondskode:latest
