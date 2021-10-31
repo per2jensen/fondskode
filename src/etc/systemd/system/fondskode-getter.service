@@ -1,11 +1,10 @@
 [Unit]
-Description=Gem kursen på realkredit lån i InfluxDB
+Description=Gem kursen på et realkredit lån i InfluxDB
 Requires=docker.service
 
 [Service]
 Type=exec
-#  "--net haasio" virker for min Home Assistant installation 
-ExecStart=docker run --net hassio --rm  per2jensen/fondskode:latest
+ExecStart=/usr/local/bin/fondskode.sh
 Restart=no
 
 [Install]
