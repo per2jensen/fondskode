@@ -1,9 +1,17 @@
 FROM ubuntu:latest
+WORKDIR /usr/local/fondskode
 
-RUN apt update && apt -y upgrade
-RUN apt install -y python3.9
-RUN apt install -y python3-pandas python3-requests python3-pip
-RUN apt install python3-influxdb
+# set TZ to Copenhagen  - avoid tzdata update requiring user interaction
+RUN echo 'tzdata tzdata/Areas select Europe' | debconf-set-selections  && \
+    echo 'tzdata tzdata/Zones/Europe select Copenhagen' | debconf-set-selections && \
+    apt-get update && DEBIAN_FRONTEND="noninteractive" apt-get install -y tzdata
+
+RUN apt-get install -y \
+    python3.9 \
+    python3-pandas \
+    python3-requests \
+    python3-pip \
+    python3-influxdb
 
 RUN groupadd -r pj && useradd -r -s /bin/false -g pj pj
 
