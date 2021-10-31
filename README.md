@@ -101,6 +101,30 @@ MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEy73oXfqT1Sw/yEymBvMoGZNi7YA2
 DLGahWTwEMrCa7zdUSXySXm+6e2KLgtM2Xv+i5YzxZ3GGJJZHVPnu139Uw==
 -----END PUBLIC KEY-----
 ````
+
+## Docker trust
+Man kan se hvilke nøgler der kan signe docker images i per2jensen/fondskode repoet:
+````
+~$ docker trust inspect --pretty per2jensen/fondskode:latest
+
+Signatures for per2jensen/fondskode:latest
+
+SIGNED TAG   DIGEST                                                             SIGNERS
+latest       847278dd7bf3c3d94d63403ff0e1ed17f0cc2119f0a5ea5894c19b92f5ac4661   fondskode
+
+List of signers and their keys for per2jensen/fondskode:latest
+
+SIGNER      KEYS
+fondskode   890fff0490ab
+
+Administrative keys for per2jensen/fondskode:latest
+
+  Repository Key:	5f35ea18dde68e1777d3d4f25b2d4b28151c8e0ea3edb9ee27f2419ed37136d2
+  Root Key:	25961d155ac858734487619894dd04e666d436e35bc327f1f1fd30243f415c9f
+
+````
+
+
 # Links
 
   [Totalkredit siden med kurser](https://netbank.totalkredit.dk/netbank/showStockExchangeInternal.do)
@@ -114,3 +138,5 @@ DLGahWTwEMrCa7zdUSXySXm+6e2KLgtM2Xv+i5YzxZ3GGJJZHVPnu139Uw==
   [Hvis du vil ramme host localhost indefra en container....](https://www.cloudsavvyit.com/14114/how-to-connect-to-localhost-within-a-docker-container/)
 
   [Signing af docker images](https://betterprogramming.pub/docker-content-trust-security-digital-signatures-eeae9348140d)
+  
+  [Docker trust](https://docs.docker.com/engine/security/trust/)
