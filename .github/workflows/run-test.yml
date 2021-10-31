@@ -49,13 +49,13 @@ jobs:
         run:  curl -I -G -X GET http://localhost:8086/query -u CI_USER:thesecret  --data-urlencode "q=CREATE DATABASE CI_DB"
 
       - name: create fondskode user
-        run:  curl -I -G -X GET http://localhost:8086/query -u CI_USER:thesecret  --data-urlencode "q=CREATE USER 'fondsuser' WITH PASSWORD 'fondspassword'"  
+        run:  curl -I -G -X GET http://localhost:8086/query -u CI_USER:thesecret  --data-urlencode "q=CREATE USER fondsuser WITH PASSWORD 'fondspassword'"  
 
       - name: grant read to fondsuser
-        run:  curl -I -G -X GET http://localhost:8086/query -u CI_USER:thesecret  --data-urlencode "q="GRANT READ ON 'fondskode' TO 'fondsuser'"  
+        run:  curl -I -G -X GET http://localhost:8086/query -u CI_USER:thesecret  --data-urlencode "q="GRANT READ ON fondskode TO fondsuser"  
 
       - name: grant write to fondsuser
-        run:  curl -I -G -X GET http://localhost:8086/query -u CI_USER:thesecret  --data-urlencode "q="GRANT WRITE ON 'fondskode' TO 'fondsuser'"  
+        run:  curl -I -G -X GET http://localhost:8086/query -u CI_USER:thesecret  --data-urlencode "q="GRANT WRITE ON fondskode TO fondsuser"  
 
       - name: Build fondskode image
         run:  sudo docker build --tag per2jensen/fondskode  src
