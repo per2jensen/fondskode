@@ -9,6 +9,5 @@ docker run \
   -e INFLUX_DB='<influxdb DB>' \
   --net <navn på docker netværk, hvis influxdb kører i en container> \
   --rm  \
-  -it \
   per2jensen/fondskode:latest
 
