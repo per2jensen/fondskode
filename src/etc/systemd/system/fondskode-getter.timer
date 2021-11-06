@@ -2,7 +2,7 @@
 Description=Gem kursen på realkredit lån i InfluxDB
 
 [Timer]
-OnCalendar=Mon-Fri *-*-* 23:53:* 
+OnCalendar=*-*-* 23:53:* 
 Unit=fondskode-getter.service
 Persistent=true
 

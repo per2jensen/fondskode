@@ -82,8 +82,16 @@ Dermed bliver programmet kørt en gang i døgnet, ind under midnat.
 
 Kør derefter denne kommando
 ````
-sudo systemctl daemon-reload 
+sudo systemctl enable fondskode-getter.timer
+sudo systemctl start fondskode-getter.timer
+ 
 ````
+
+Check at timeren er sat og er klar
+````
+systemctl list-timers |grep -i fondskode
+````
+
 
 # Docker Hub
 
